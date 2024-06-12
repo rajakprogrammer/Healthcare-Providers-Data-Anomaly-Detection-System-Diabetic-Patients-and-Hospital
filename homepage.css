@@ -1,0 +1,34 @@
+body {
+        background-color: #150101;
+        color: #333;
+        /* Adding a background image */
+        background-image: url("doctor.gif");
+        background-size: cover; /* Cover the entire page */
+        background-position: center center; /* Center the background image */
+        background-attachment: fixed; /* Fix the background image during scroll */
+    }
+    .container {
+        padding-top: 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* Optional: make container slightly transparent to see the background */
+        border-radius: 5px; /* Optional: round corners of the container */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: add shadow for better depth */
+    }
+    .custom-file-input {
+        margin-bottom: 20px;
+    }
+    #results {
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .anomaly {
+        color: red;
+        font-weight: bold;
+    }
+    #description {
+        background-color: #fff; /* White background */
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    }

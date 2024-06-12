@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetic Anomaly Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Diabetic Anomaly Detection</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hello, {{ username }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Diabetic Anomaly Detection</h1>
+        <div class="text-center">
+            <a href="{{ url_for('analyze_instance') }}" class="btn btn-primary">Analyze Single Instance</a>
+        </div>
+        <div class="text-center mt-3">
+            <form action="{{ url_for('analyze_dataset') }}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" class="form-control-file" name="file">
+                </div>
+                <button type="submit" class="btn btn-primary">Analyze Dataset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
